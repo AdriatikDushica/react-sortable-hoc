@@ -136,7 +136,7 @@ In root folder:
 ```
 
 ### Grid support
-Need to sort items in a grid? We've got you covered! Just set the `axis` prop to `xy`. Grid support is currently limited to a setup where all the cells in the grid have the same width and height, though we're working hard to get variable width support in the near future.
+Need to sort items in a grid? We've got you covered! Just set the `axis` prop to `xy`.
 
 ### Item disappearing when sorting / CSS issues
 Upon sorting, `react-sortable-hoc` creates a clone of the element you are sorting (the _sortable-helper_) and appends it to the end of the `<body>` tag. The original element will still be in-place to preserve its position in the DOM until the end of the drag (with inline-styling to make it invisible). If the _sortable-helper_ gets messed up from a CSS standpoint, consider that maybe your selectors to the draggable item are dependent on a parent element which isn't present anymore (again, since the _sortable-helper_ is at the end of the `<body>`). This can also be a `z-index` issue, for example, when using `react-sortable-hoc` within a Bootstrap modal, you'll need to increase the `z-index` of the SortableHelper so it is displayed on top of the modal (see [#87](https://github.com/clauderic/react-sortable-hoc/issues/87) for more details).
